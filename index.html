@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Science Behind Anti-na® SIPS | sips.science</title>
+<meta name="description" content="Clinical research, ingredient science, and practitioner resources for Anti-na® SIPS — 2,000mg therapeutic ginger + 1,000mg Bioenergy Ribose® for chemotherapy-induced nausea and fatigue (CINV).">
+<link rel="canonical" href="https://sips.science/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sips.science/">
+<meta property="og:title" content="The Science Behind Anti-na® SIPS | sips.science">
+<meta property="og:description" content="Peer-reviewed research, ingredient mechanisms, and clinical resources behind Anti-na® SIPS.">
+<meta property="og:site_name" content="sips.science">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Shared brand stylesheet -->
+<link rel="stylesheet" href="css/brand.css">
+
+<!-- Organization schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "sips.science",
+  "description": "The clinical research and practitioner resource site for Anti-na SIPS, a dietary supplement combining therapeutic ginger and Bioenergy Ribose for chemotherapy-induced nausea and fatigue.",
+  "url": "https://sips.science",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Anti-na",
+    "legalName": "KDD Nutraceuticals, Inc.",
+    "url": "https://anti-na.com"
+  },
+  "sameAs": ["https://anti-na.com"]
+}
+</script>
+
+<style>
+  /* ── PAGE-SPECIFIC STYLES (sips.science homepage) ── */
+
+  /* Hero — cooler, more clinical than anti-na.com hero */
+  .sci-hero {
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 90px 0 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sci-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 90% at 80% 30%, rgba(0,168,150,.22) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .sci-hero__eyebrow { color: var(--teal); }
+  .sci-hero h1 {
+    color: var(--white);
+    font-size: clamp(36px, 6vw, 58px);
+    max-width: 720px;
+    margin-bottom: 20px;
+  }
+  .sci-hero h1 em { color: var(--teal); font-style: italic; }
+  .sci-hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,.78);
+    max-width: 600px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+  .sci-hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* Stat strip */
+  .stat-strip {
+    background: var(--teal);
+    color: var(--white);
+    padding: 0;
+  }
+  .stat-strip__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .stat-strip__item {
+    text-align: center;
+    padding: 28px 32px;
+    border-right: 1px solid rgba(255,255,255,.2);
+    flex: 1;
+    min-width: 180px;
+  }
+  .stat-strip__item:last-child { border-right: none; }
+  .stat-strip__num {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-strip__label { font-size: 14px; color: rgba(255,255,255,.8); line-height: 1.5; }
+
+  /* Resource cards grid */
+  .resource-card {
+    text-decoration: none;
+    color: var(--charcoal);
+    display: block;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(44,44,44,.08);
+  }
+  .resource-card__icon {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: var(--teal-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  .resource-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+  }
+  .resource-card p {
+    font-size: 15px;
+    color: var(--mid);
+    margin-bottom: 0;
+  }
+  .resource-card__arrow {
+    color: var(--teal-dark);
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 14px;
+    display: inline-block;
+  }
+
+  /* Ingredient overview cards */
+  .ingredient-overview {
+    background: var(--cream-2);
+    border: 1.5px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+  }
+  .ingredient-overview__dose {
+    font-family: var(--font-sans);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .ingredient-overview__name {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Cross-domain banner -->
+<div class="cross-domain-banner">
+  This is the clinical research site for Anti-na® SIPS — to purchase, visit <a href="https://anti-na.com">anti-na.com</a>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-header__logo">
+      ANTI-NA®
+      <span class="sub">sips.science</span>
+    </a>
+    <nav class="site-header__nav">
+      <a href="pages/studies.html">Studies</a>
+      <a href="pages/ingredients.html">Ingredients</a>
+      <a href="pages/for-practitioners.html">For Practitioners</a>
+      <a href="pages/press.html">Press</a>
+    </nav>
+    <a href="https://anti-na.com/products/anti-na-sips" class="site-header__cta">Shop SIPS →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="sci-hero">
+  <div class="container">
+    <span class="eyebrow sci-hero__eyebrow">The research behind the formula</span>
+    <h1>
+      The clinical science behind <em>Anti-na® SIPS</em>
+    </h1>
+    <p>
+      Anti-na® SIPS combines 2,000mg therapeutic ginger root extract with 1,000mg Bioenergy Ribose® to address chemotherapy-induced nausea and fatigue (CINV). This site is the research library — peer-reviewed studies, ingredient mechanisms, and clinical resources for practitioners, researchers, and anyone who wants to look under the hood.
+    </p>
+    <div class="sci-hero__ctas">
+      <a href="pages/studies.html" class="btn btn--teal">View the study library</a>
+      <a href="pages/for-practitioners.html" class="btn btn--outline" style="background:transparent;border-color:rgba(255,255,255,.3);color:#fff">For healthcare providers</a>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<div class="stat-strip">
+  <div class="stat-strip__inner">
+    <div class="stat-strip__item">
+      <div class="stat-strip__num">50+</div>
+      <div class="stat-strip__label">peer-reviewed studies support therapeutic ginger for CINV</div>
+    </div>
+    <div class="stat-strip__item">
+      <div class="stat-strip__num">283</div>
+      <div class="stat-strip__label">clinicians currently recommend SIPS to patients (via FrontrowMD)</div>
+    </div>
+    <div class="stat-strip__item">
+      <div class="stat-strip__num">2,000mg</div>
+      <div class="stat-strip__label">therapeutic ginger dose — the amount validated in CINV research</div>
+    </div>
+    <div class="stat-strip__item">
+      <div class="stat-strip__num">5–15 min</div>
+      <div class="stat-strip__label">onset via sublingual absorption</div>
+    </div>
+  </div>
+</div>
+
+<!-- DEFINITION / GEO HOOK -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow eyebrow--teal">What SIPS is, in one sentence</span>
+    <div class="card card--cream" style="border-left:4px solid var(--teal); border-radius: 0 var(--radius) var(--radius) 0;">
+      <p style="font-size:19px; color:var(--charcoal); margin:0; line-height:1.7">
+        Anti-na® SIPS is a dissolvable dietary supplement combining 2,000mg therapeutic ginger root extract and 1,000mg Bioenergy Ribose® (D-Ribose), formulated for sublingual absorption to address chemotherapy-induced nausea and fatigue (CINV) — manufactured in an FDA-registered facility in Irvine, California and tested for WADA banned substances.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- INGREDIENT OVERVIEW -->
+<section class="section--tight">
+  <div class="container">
+    <span class="eyebrow eyebrow--teal">The dual-action formula</span>
+    <h2 style="font-size:36px; margin-bottom:28px;">Two ingredients. One mechanism.</h2>
+    <div class="grid-2">
+
+      <div class="ingredient-overview">
+        <div class="ingredient-overview__dose">2,000mg</div>
+        <div class="ingredient-overview__name">Therapeutic ginger root extract</div>
+        <p style="font-size:16px; color:var(--mid); line-height:1.75; margin-bottom:14px;">
+          Acts as a 5-HT3 antagonist and NK1 modulator — the same receptor pathway targeted by prescription antiemetics like ondansetron, but via natural gingerols. Supports gastric motility, reducing the "heavy" feeling associated with CINV.
+        </p>
+        <span class="citation">Ryan et al., 2012 — ASCO clinical trial</span>
+      </div>
+
+      <div class="ingredient-overview">
+        <div class="ingredient-overview__dose">1,000mg</div>
+        <div class="ingredient-overview__name">Bioenergy Ribose® (D-Ribose)</div>
+        <p style="font-size:16px; color:var(--mid); line-height:1.75; margin-bottom:14px;">
+          D-Ribose is the rate-limiting substrate in the pentose phosphate pathway for ATP synthesis. Chemotherapy agents place significant mitochondrial stress on cells — D-Ribose supplies the raw material for cellular energy recovery.
+        </p>
+        <span class="citation">Teitelbaum et al., 2006</span>
+      </div>
+
+    </div>
+    <div style="text-align:center; margin-top:28px;">
+      <a href="pages/ingredients.html" class="btn btn--outline">Read the full ingredient breakdown →</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCE CARDS -->
+<section class="section" style="background:var(--cream-2)">
+  <div class="container">
+    <span class="eyebrow eyebrow--teal">Explore the research</span>
+    <h2 style="font-size:36px; margin-bottom:28px;">Resources by audience</h2>
+    <div class="grid-3">
+
+      <a href="pages/studies.html" class="resource-card card">
+        <div class="resource-card__icon">📚</div>
+        <h3>Study Library</h3>
+        <p>The full collection of peer-reviewed research on ginger for CINV and D-Ribose for cellular energy support, with direct PubMed links.</p>
+        <span class="resource-card__arrow">Browse studies →</span>
+      </a>
+
+      <a href="pages/ingredients.html" class="resource-card card">
+        <div class="resource-card__icon">🧪</div>
+        <h3>Ingredient Science</h3>
+        <p>Deep-dive mechanism pages for ginger root extract and Bioenergy Ribose® — how each works at the cellular level.</p>
+        <span class="resource-card__arrow">Explore ingredients →</span>
+      </a>
+
+      <a href="pages/for-practitioners.html" class="resource-card card">
+        <div class="resource-card__icon">🩺</div>
+        <h3>For Practitioners</h3>
+        <p>Clinical quick reference, drug interaction summary, dosing guidance, and a downloadable one-pager for your patients.</p>
+        <span class="resource-card__arrow">View practitioner resources →</span>
+      </a>
+
+      <a href="pages/press.html" class="resource-card card">
+        <div class="resource-card__icon">📰</div>
+        <h3>Press &amp; Media</h3>
+        <p>Brand assets, founder bio, advisor credentials, and key statistics for journalists and podcast producers.</p>
+        <span class="resource-card__arrow">Press kit →</span>
+      </a>
+
+      <a href="pages/for-practitioners.html#sample-request" class="resource-card card">
+        <div class="resource-card__icon">📦</div>
+        <h3>Sample Requests</h3>
+        <p>Infusion centers and wellness practices can request a sample kit for patients — no obligation.</p>
+        <span class="resource-card__arrow">Request samples →</span>
+      </a>
+
+      <a href="https://anti-na.com/products/anti-na-sips" class="resource-card card" style="background:var(--orange-light); border-color:var(--orange)">
+        <div class="resource-card__icon" style="background:var(--white)">🛒</div>
+        <h3>Ready to try SIPS?</h3>
+        <p>Head to anti-na.com to shop — 30-day money-back guarantee, free shipping over $25.</p>
+        <span class="resource-card__arrow" style="color:var(--orange-dark)">Shop on anti-na.com →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ADVISORS -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow eyebrow--teal">Clinical advisors</span>
+    <h2 style="font-size:36px; margin-bottom:28px;">Our Board of Advisors</h2>
+    <div class="grid-2">
+
+      <div class="card">
+        <div style="display:flex; gap:16px; align-items:flex-start;">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--orange-light);color:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;flex-shrink:0;">DF</div>
+          <div>
+            <h3 style="font-size:18px; font-family:var(--font-sans); font-weight:700; margin-bottom:4px;">David Foreman, RPh</h3>
+            <p style="font-size:14px; color:var(--muted); margin:0;">
+              Registered Pharmacist · The Herbal Pharmacist®<br>
+              National radio host · Hospital lecturer<br>
+              University of South Carolina College of Pharmacy, 1987<br>
+              Board of Advisors, Anti-na®
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex; gap:16px; align-items:flex-start;">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--teal-light);color:var(--teal-dark);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;flex-shrink:0;">DR</div>
+          <div>
+            <h3 style="font-size:18px; font-family:var(--font-sans); font-weight:700; margin-bottom:4px;">Diana Ramos, MD, MPH, MBA</h3>
+            <p style="font-size:14px; color:var(--muted); margin:0;">
+              ACOG Vice Chair, District IX<br>
+              Associate Clinical Professor, Keck School of Medicine, USC<br>
+              Formula Advisor, Anti-na®
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <div class="site-footer__title">sips.science</div>
+        <p style="font-size:14px; line-height:1.7; max-width:380px;">
+          The clinical research and practitioner resource site for Anti-na® SIPS. Operated by KDD Nutraceuticals, Inc., Irvine, CA.
+        </p>
+      </div>
+      <div>
+        <div class="site-footer__title">Research</div>
+        <p style="line-height:2">
+          <a href="pages/studies.html">Study Library</a><br>
+          <a href="pages/ingredients.html">Ingredient Science</a><br>
+          <a href="pages/for-practitioners.html">For Practitioners</a>
+        </p>
+      </div>
+      <div>
+        <div class="site-footer__title">Anti-na®</div>
+        <p style="line-height:2">
+          <a href="https://anti-na.com">Shop SIPS</a><br>
+          <a href="https://anti-na.com/pages/about-us">About Anti-na</a><br>
+          <a href="pages/press.html">Press Kit</a>
+        </p>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div>© 2026 KDD Nutraceuticals, Inc. · Irvine, CA 92606</div>
+      <div>orders@kddnutra.com</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
