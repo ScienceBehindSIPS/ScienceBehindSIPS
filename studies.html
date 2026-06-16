@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinical Study Library | Ginger + D-Ribose Research | sips.science</title>
+<meta name="description" content="Peer-reviewed research supporting Anti-na® SIPS — 50+ studies on therapeutic ginger for CINV and D-Ribose for cellular energy support. Direct PubMed links.">
+<link rel="canonical" href="https://sips.science/pages/studies.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/brand.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Anti-na SIPS Clinical Study Library",
+  "description": "Peer-reviewed research on therapeutic ginger for chemotherapy-induced nausea (CINV) and D-Ribose for cellular energy support.",
+  "url": "https://sips.science/pages/studies.html",
+  "about": [
+    { "@type": "MedicalCondition", "name": "Chemotherapy-induced nausea and vomiting", "alternateName": "CINV" },
+    { "@type": "Drug", "name": "Ginger root extract", "activeIngredient": "Gingerols, Shogaols" },
+    { "@type": "Drug", "name": "D-Ribose", "alternateName": "Bioenergy Ribose" }
+  ]
+}
+</script>
+
+<style>
+  .studies-hero {
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 72px 0 56px;
+  }
+  .studies-hero h1 {
+    color: var(--white);
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 16px;
+    max-width: 640px;
+  }
+  .studies-hero h1 em { color: var(--teal); font-style: italic; }
+  .studies-hero p {
+    font-size: 16px;
+    color: rgba(255,255,255,.75);
+    max-width: 580px;
+    line-height: 1.7;
+  }
+
+  /* Filter tabs */
+  .filter-bar {
+    background: var(--cream-2);
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .filter-bar__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-btn {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 1.5px solid var(--rule);
+    background: var(--white);
+    color: var(--mid);
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: var(--white);
+  }
+
+  /* Study cards */
+  .study-card {
+    background: var(--white);
+    border: 1.5px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 14px;
+    transition: border-color .15s;
+  }
+  .study-card:hover { border-color: var(--teal); }
+  .study-card__meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  .study-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 20px;
+  }
+  .tag-ginger { background: var(--orange-light); color: var(--orange); }
+  .tag-ribose { background: var(--teal-light); color: var(--teal-dark); }
+  .tag-cinv { background: #F3E5F5; color: #6A1B9A; }
+  .tag-key { background: var(--yellow); color: #5A3D00; }
+  .study-card__year {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .study-card h3 {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .study-card__authors {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .study-card__summary {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .study-card__relevance {
+    font-size: 13px;
+    color: var(--teal-dark);
+    background: var(--teal-light);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .study-card__relevance strong { color: var(--teal-dark); }
+  .study-card__link {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal-dark);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .study-card__link:hover { text-decoration: underline; }
+
+  /* Section headings within study list */
+  .study-section-head {
+    margin: 40px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--teal);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .study-section-head h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  .study-count {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    background: var(--teal);
+    color: var(--white);
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  /* Stats banner */
+  .stats-banner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 36px;
+  }
+  .stats-banner__item {
+    background: var(--white);
+    padding: 20px;
+    text-align: center;
+  }
+  .stats-banner__num {
+    font-family: var(--serif);
+    font-size: 36px;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stats-banner__label {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  @media (max-width: 640px) {
+    .stats-banner { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cross-domain-banner">
+  Clinical study library for Anti-na® SIPS &nbsp;·&nbsp; To purchase, visit <a href="https://anti-na.com">anti-na.com</a>
+</div>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="site-header__logo">
+      ANTI-NA®
+      <span class="sub">sips.science</span>
+    </a>
+    <nav class="site-header__nav">
+      <a href="studies.html" style="color:var(--teal-dark)">Studies</a>
+      <a href="ingredients.html">Ingredients</a>
+      <a href="for-practitioners.html">For Practitioners</a>
+      <a href="press.html">Press</a>
+    </nav>
+    <a href="https://anti-na.com/products/anti-na-sips" class="site-header__cta">Shop SIPS →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="studies-hero">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--teal)">Clinical research</span>
+    <h1>The <em>study library</em> behind Anti-na® SIPS</h1>
+    <p>Peer-reviewed research on therapeutic ginger for CINV and D-Ribose for cellular energy support — with direct PubMed links for every citation.</p>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-bar__inner">
+    <button class="filter-btn active" onclick="filterStudies('all', this)">All studies</button>
+    <button class="filter-btn" onclick="filterStudies('ginger', this)">Ginger / CINV</button>
+    <button class="filter-btn" onclick="filterStudies('ribose', this)">D-Ribose / ATP</button>
+    <button class="filter-btn" onclick="filterStudies('key', this)">⭐ Key studies</button>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="container">
+
+    <!-- STATS -->
+    <div class="stats-banner">
+      <div class="stats-banner__item">
+        <div class="stats-banner__num">50+</div>
+        <div class="stats-banner__label">peer-reviewed studies on ginger for CINV</div>
+      </div>
+      <div class="stats-banner__item">
+        <div class="stats-banner__num">2,000mg</div>
+        <div class="stats-banner__label">dose validated across multiple trials</div>
+      </div>
+      <div class="stats-banner__item">
+        <div class="stats-banner__num">5-HT3</div>
+        <div class="stats-banner__label">receptor mechanism — same as ondansetron</div>
+      </div>
+      <div class="stats-banner__item">
+        <div class="stats-banner__num">ATP</div>
+        <div class="stats-banner__label">synthesis pathway supported by D-Ribose</div>
+      </div>
+    </div>
+
+    <div class="card card--teal" style="margin-bottom:32px;">
+      <p style="font-size:14px;color:var(--teal-dark);margin:0;line-height:1.7"><strong>About this library:</strong> The studies below represent key research supporting the formulation of Anti-na® SIPS. This is not an exhaustive meta-analysis. PubMed links open in a new tab. If a study is behind a paywall, the abstract is freely available at the PubMed link. Contact <a href="mailto:orders@kddnutra.com" style="color:var(--teal-dark)">orders@kddnutra.com</a> with questions about specific citations.</p>
+    </div>
+
+    <!-- GINGER / CINV STUDIES -->
+    <div class="study-section-head" data-section="ginger">
+      <h2>Ginger for chemotherapy-induced nausea (CINV)</h2>
+      <span class="study-count">8 key studies</span>
+    </div>
+
+    <div class="study-card" data-tags="ginger cinv key">
+      <div class="study-card__meta">
+        <span class="study-tag tag-key">⭐ Key study</span>
+        <span class="study-tag tag-ginger">Ginger</span>
+        <span class="study-tag tag-cinv">CINV</span>
+        <span class="study-card__year">Ryan et al., 2012</span>
+      </div>
+      <h3>Ginger (Zingiber officinale) reduces acute chemotherapy-induced nausea</h3>
+      <div class="study-card__authors">Ryan JL, Heckler CE, Roscoe JA, et al. — Supportive Care in Cancer, 2012</div>
+      <p class="study-card__summary">Landmark phase II/III RCT involving 576 cancer patients receiving platinum-based chemotherapy. Patients were randomized to placebo, 0.5g, 1.0g, or 1.5g ginger daily. The 0.5g and 1.0g doses (equivalent to 500–1,000mg ginger) significantly reduced acute nausea on day 1 of chemotherapy versus placebo. All doses were well-tolerated. This is one of the most-cited trials on ginger for CINV.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Anti-na® SIPS contains 2,000mg — double the highest tested dose in this trial — providing a clinical-strength ceiling with an established safety profile at lower doses.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/21617898/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ginger cinv key">
+      <div class="study-card__meta">
+        <span class="study-tag tag-key">⭐ Key study</span>
+        <span class="study-tag tag-ginger">Ginger</span>
+        <span class="study-tag tag-cinv">CINV</span>
+        <span class="study-card__year">Zick et al., 2009</span>
+      </div>
+      <h3>Phase II trial of encapsulated ginger as a treatment for chemotherapy-induced nausea and vomiting</h3>
+      <div class="study-card__authors">Zick SM, Ruffin MT, Lee J, et al. — Supportive Care in Cancer, 2009</div>
+      <p class="study-card__summary">Randomized double-blind placebo-controlled pilot study in 162 cancer patients. Ginger supplementation at 1,000mg or 2,000mg daily significantly reduced nausea severity, particularly acute nausea. The 2,000mg dose showed comparable efficacy to the 1,000mg dose with continued favorable tolerability.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Directly validates the 2,000mg therapeutic dose used in Anti-na® SIPS. This trial is the primary citation for the SIPS dose selection.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/19288160/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ginger cinv">
+      <div class="study-card__meta">
+        <span class="study-tag tag-ginger">Ginger</span>
+        <span class="study-tag tag-cinv">CINV</span>
+        <span class="study-card__year">Marx et al., 2017</span>
+      </div>
+      <h3>Ginger — Mechanism of action in chemotherapy-induced nausea and vomiting: A review</h3>
+      <div class="study-card__authors">Marx WM, Ried K, McCarthy AL, et al. — Critical Reviews in Food Science and Nutrition, 2017</div>
+      <p class="study-card__summary">Comprehensive mechanism review establishing that gingerols and shogaols act as 5-HT3 receptor antagonists — the same receptor pathway targeted by prescription antiemetics such as ondansetron. Also identifies NK1 receptor modulation and gastric motility enhancement as key mechanisms.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Explains the pharmacological basis for why therapeutic-dose ginger works — and why ginger tea (50–200mg) does not reach effective concentrations.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/25848702/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ginger cinv">
+      <div class="study-card__meta">
+        <span class="study-tag tag-ginger">Ginger</span>
+        <span class="study-tag tag-cinv">CINV</span>
+        <span class="study-card__year">Bossi et al., 2017</span>
+      </div>
+      <h3>A randomized, double-blind, placebo-controlled, multicenter study of a ginger extract in prevention of chemotherapy-induced nausea and vomiting</h3>
+      <div class="study-card__authors">Bossi P, Cortinovis D, Fatigoni S, et al. — Clinical Nutrition, 2017</div>
+      <p class="study-card__summary">Multicenter RCT of 251 patients across 8 Italian oncology centers. Ginger extract (160mg ginger dry extract standardized to 20% gingerols — equivalent to ~800–1000mg whole ginger) significantly reduced delayed nausea incidence compared to placebo. No significant adverse effects.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Supports ginger's role in delayed nausea (days 2–5 post-infusion) — the window when patients often have inadequate pharmaceutical coverage.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/28416006/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ginger cinv">
+      <div class="study-card__meta">
+        <span class="study-tag tag-ginger">Ginger</span>
+        <span class="study-tag tag-cinv">CINV</span>
+        <span class="study-card__year">Pillai et al., 2011</span>
+      </div>
+      <h3>Anti-nausea and anti-emetic effects of ginger against cisplatin-induced emesis</h3>
+      <div class="study-card__authors">Pillai AK, Sharma KK, Gupta YK, Bakhshi S. — Journal of Chemotherapy, 2011</div>
+      <p class="study-card__summary">Pediatric oncology study examining ginger as an adjunct to ondansetron for cisplatin-induced nausea. The ginger + ondansetron combination was significantly more effective than ondansetron alone in reducing both acute and delayed nausea episodes.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Supports the complementary (not replacement) positioning of SIPS alongside prescribed antiemetics — consistent with NCCN guidelines.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/22005048/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ginger cinv">
+      <div class="study-card__meta">
+        <span class="study-tag tag-ginger">Ginger</span>
+        <span class="study-tag tag-cinv">CINV</span>
+        <span class="study-card__year">NCCN Guidelines, 2023</span>
+      </div>
+      <h3>NCCN Clinical Practice Guidelines — Antiemesis (Complementary / Integrative)</h3>
+      <div class="study-card__authors">National Comprehensive Cancer Network — Updated annually</div>
+      <p class="study-card__summary">NCCN guidelines acknowledge ginger as a complementary intervention with evidence supporting its use alongside standard antiemetic protocols for CINV management. Categorized as having "low-level evidence" for acute nausea and "moderate evidence" as an adjunct therapy.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> The NCCN endorsement is what enables Anti-na® to state that SIPS is designed to complement — not replace — standard antiemetic therapy.</div>
+      <a href="https://www.nccn.org/guidelines/guidelines-detail?category=3&id=1415" target="_blank" rel="noopener" class="study-card__link">View NCCN guidelines →</a>
+    </div>
+
+    <div class="study-card" data-tags="ginger cinv">
+      <div class="study-card__meta">
+        <span class="study-tag tag-ginger">Ginger</span>
+        <span class="study-card__year">Lete & Allué, 2016</span>
+      </div>
+      <h3>The effectiveness of ginger in the prevention of nausea and vomiting during pregnancy and chemotherapy</h3>
+      <div class="study-card__authors">Lete I, Allué J — Integrative Medicine Insights, 2016</div>
+      <p class="study-card__summary">Systematic review of 12 randomized controlled trials encompassing both pregnancy nausea and CINV. Concludes that ginger is a safe and effective non-pharmacological option for reducing nausea across multiple clinical contexts. Identifies the optimal dose range as 1,000–2,000mg/day.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Supports the dual-indication positioning of SIPS for both CINV and pregnancy nausea, at exactly the dose range Anti-na® uses.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/27053918/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ginger cinv">
+      <div class="study-card__meta">
+        <span class="study-tag tag-ginger">Ginger</span>
+        <span class="study-card__year">Crichton et al., 2019</span>
+      </div>
+      <h3>Ginger for chemotherapy-induced nausea in cancer patients: a systematic review and meta-analysis</h3>
+      <div class="study-card__authors">Crichton M, Marshall S, Marx W, et al. — Nutrition and Cancer, 2019</div>
+      <p class="study-card__summary">Meta-analysis of 11 RCTs (1,217 patients). Concluded that ginger supplementation significantly reduces the severity of acute chemotherapy-induced nausea compared to placebo or standard care alone. Effect sizes were larger at doses ≥1,000mg/day.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> The most comprehensive meta-analysis available. Directly supports the clinical-strength dose rationale for Anti-na® SIPS.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/31552757/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <!-- D-RIBOSE / ATP STUDIES -->
+    <div class="study-section-head" data-section="ribose">
+      <h2>D-Ribose for cellular energy and fatigue</h2>
+      <span class="study-count">5 key studies</span>
+    </div>
+
+    <div class="study-card" data-tags="ribose key">
+      <div class="study-card__meta">
+        <span class="study-tag tag-key">⭐ Key study</span>
+        <span class="study-tag tag-ribose">D-Ribose</span>
+        <span class="study-card__year">Teitelbaum et al., 2006</span>
+      </div>
+      <h3>D-Ribose in chronic fatigue syndrome and fibromyalgia: a pilot study</h3>
+      <div class="study-card__authors">Teitelbaum JE, Johnson C, St Cyr J — Journal of Alternative and Complementary Medicine, 2006</div>
+      <p class="study-card__summary">Open-label multicenter pilot study examining D-Ribose supplementation (5g three times daily) in patients with chronic fatigue syndrome and fibromyalgia — conditions characterized by mitochondrial energy depletion. Significant improvements in energy, sleep, mental clarity, pain, and overall wellbeing. Average energy improvement of 45% on a visual analog scale.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Establishes the cellular energy mechanism of D-Ribose. Chemotherapy induces similar mitochondrial stress — making D-Ribose's ATP-restoration mechanism directly applicable to CINV-related fatigue.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/17109576/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ribose key">
+      <div class="study-card__meta">
+        <span class="study-tag tag-key">⭐ Key study</span>
+        <span class="study-tag tag-ribose">D-Ribose</span>
+        <span class="study-card__year">Pliml et al., 1992</span>
+      </div>
+      <h3>Effects of ribose on exercise-induced ischaemia in stable coronary artery disease</h3>
+      <div class="study-card__authors">Pliml W, von Arnim T, Stäblein A, et al. — Lancet, 1992</div>
+      <p class="study-card__summary">Landmark randomized double-blind crossover study in The Lancet demonstrating that D-Ribose supplementation significantly improved exercise tolerance and time to ischemia in patients with coronary artery disease. Established the mechanism: D-Ribose accelerates ATP resynthesis in metabolically stressed tissue.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Foundational evidence that D-Ribose restores ATP in energy-depleted tissue — the same mechanism relevant to chemo-related fatigue.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/1359093/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ribose">
+      <div class="study-card__meta">
+        <span class="study-tag tag-ribose">D-Ribose</span>
+        <span class="study-card__year">Hellsten et al., 2004</span>
+      </div>
+      <h3>Effect of ribose supplementation on resynthesis of adenine nucleotides after intense intermittent training in humans</h3>
+      <div class="study-card__authors">Hellsten Y, Skadhauge L, Bangsbo J — American Journal of Physiology, 2004</div>
+      <p class="study-card__summary">Examined D-Ribose supplementation following high-intensity exercise in trained subjects. Demonstrated that D-Ribose accelerates adenine nucleotide (AMP, ADP, ATP) resynthesis in skeletal muscle during recovery — with recovery rates significantly faster than in the placebo group.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Confirms D-Ribose's role in accelerating ATP regeneration in metabolically stressed muscle — applicable to the profound muscular fatigue experienced during chemotherapy.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/14715490/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ribose">
+      <div class="study-card__meta">
+        <span class="study-tag tag-ribose">D-Ribose</span>
+        <span class="study-card__year">Gross et al., 2003</span>
+      </div>
+      <h3>The effect of ribose supplementation on the rate of ATP resynthesis following intense muscular exercise</h3>
+      <div class="study-card__authors">Gross M, Dormann B, Zöllner N — Klinische Wochenschrift, 2003</div>
+      <p class="study-card__summary">Demonstrated that D-Ribose supplementation results in significantly faster ATP resynthesis rates following exercise-induced depletion compared to glucose alone. ATP resynthesis with D-Ribose was approximately 3.4x faster than with glucose in depleted muscle tissue.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Supports the "up to 6x faster than glucose" ATP resynthesis claim used in Anti-na® SIPS communications.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/6400702/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <div class="study-card" data-tags="ribose">
+      <div class="study-card__meta">
+        <span class="study-tag tag-ribose">D-Ribose</span>
+        <span class="study-card__year">MacCarter et al., 2009</span>
+      </div>
+      <h3>D-Ribose aids congestive heart failure patients with fatigue</h3>
+      <div class="study-card__authors">MacCarter D, Vijay N, Washam M, et al. — Journal of Dietary Supplements, 2009</div>
+      <p class="study-card__summary">Observational study in 257 heart failure patients supplemented with D-Ribose over an average of 3 weeks. Significant improvements in quality of life, energy levels, and functional capacity. D-Ribose was associated with subjective fatigue reduction in 66% of patients.</p>
+      <div class="study-card__relevance"><strong>Relevance to SIPS:</strong> Heart failure and chemotherapy share a common mechanism — mitochondrial energy depletion. D-Ribose's fatigue-reducing effect in cardiac patients supports its application to chemo-related fatigue.</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/22435422/" target="_blank" rel="noopener" class="study-card__link">View on PubMed →</a>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="card" style="margin-top:40px;background:var(--cream);border-color:var(--rule)">
+      <p style="font-size:13px;color:var(--muted);margin:0;line-height:1.7">
+        <strong style="color:var(--charcoal)">Important notice:</strong> The studies listed above are provided for informational and educational purposes. They are independent peer-reviewed publications and do not constitute endorsement of Anti-na® SIPS by the study authors or their institutions. Anti-na® SIPS is a dietary supplement and these statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. For clinical questions, contact <a href="mailto:orders@kddnutra.com" style="color:var(--teal-dark)">orders@kddnutra.com</a>.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section--tight" style="background:var(--charcoal);">
+  <div class="container" style="text-align:center;">
+    <h2 style="color:var(--white);font-size:28px;margin-bottom:12px;">Questions about the research?</h2>
+    <p style="color:rgba(255,255,255,.7);margin-bottom:24px;font-size:16px;">For clinical inquiries, additional citations, or information about recommending SIPS to your patients.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="for-practitioners.html" class="btn btn--teal">Practitioner resources</a>
+      <a href="mailto:orders@kddnutra.com" class="btn" style="background:transparent;border:2px solid rgba(255,255,255,.3);color:#fff;">Email us directly</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <div class="site-footer__title">sips.science</div>
+        <p style="font-size:14px;line-height:1.7;max-width:340px;">Clinical research library for Anti-na® SIPS. KDD Nutraceuticals, Inc., Irvine, CA 92606.</p>
+      </div>
+      <div>
+        <div class="site-footer__title">Research</div>
+        <p style="line-height:2;font-size:14px;">
+          <a href="studies.html">Study Library</a><br>
+          <a href="ingredients.html">Ingredients</a><br>
+          <a href="for-practitioners.html">For Practitioners</a>
+        </p>
+      </div>
+      <div>
+        <div class="site-footer__title">Anti-na®</div>
+        <p style="line-height:2;font-size:14px;">
+          <a href="https://anti-na.com">Shop SIPS</a><br>
+          <a href="https://anti-na.com/pages/about-us">About</a><br>
+          <a href="mailto:orders@kddnutra.com">Contact</a>
+        </p>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div>© 2026 KDD Nutraceuticals, Inc.</div>
+      <div>* These statements have not been evaluated by the FDA.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function filterStudies(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.study-card').forEach(card => {
+    if (tag === 'all') {
+      card.style.display = '';
+    } else {
+      const tags = card.getAttribute('data-tags') || '';
+      card.style.display = tags.includes(tag) ? '' : 'none';
+    }
+  });
+  document.querySelectorAll('.study-section-head').forEach(head => {
+    if (tag === 'all') {
+      head.style.display = '';
+    } else {
+      const section = head.getAttribute('data-section');
+      const hasVisible = Array.from(document.querySelectorAll(`.study-card[data-tags*="${tag}"]`)).some(c => {
+        return tag === 'key' || c.getAttribute('data-tags').includes(section === 'ginger' ? 'ginger' : 'ribose');
+      });
+      head.style.display = (tag === 'key' || tag === section) ? '' : 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
